@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Work1_CassioCorrea.entities;
 
 namespace Work1_CassioCorrea
 {
@@ -17,9 +18,9 @@ namespace Work1_CassioCorrea
             
             Account account = new Account();         
 
-            Guid accountId = service.Create(account.createAccount());
+            Guid accountId = service.Create(AccountExtension.CreateAccount(account));
 
-            Console.WriteLine(account.toString());
+            Console.WriteLine(account);
 
             bool error = false;
             do
@@ -30,7 +31,8 @@ namespace Work1_CassioCorrea
                 if (choice.ToUpper() == "S")
                     {
                         Contact contact = new Contact();                        
-                        service.Create(contact.createContact(accountId));
+                        service.Create(ContactExtension.CreateContact(accountId,contact));
+                        Console.WriteLine(contact);
                     }
                 else if (choice.ToUpper() == "N")
                     {

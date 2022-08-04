@@ -118,9 +118,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="MyConnector.cs" />
+    <Compile Include="entities\Account.cs" />
+    <Compile Include="entities\AccountExtension.cs" />
+    <Compile Include="entities\Contact.cs" />
+    <Compile Include="entities\ContactExtension.cs" />
+    <Compile Include="utils\MyConnector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
